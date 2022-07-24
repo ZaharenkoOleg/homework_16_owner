@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0'
+
+repositories {
+    mavenCentral()
+}
+
+compileTestJava {
+    options.encoding = 'UTF-8'
+}
+dependencies {
+    testImplementation(
+            'org.junit.jupiter:junit-jupiter:5.8.2',
+            'com.codeborne:selenide:6.6.6',
+            'org.aeonbits.owner:owner:1.0.12'
+    )
+}
+tasks.withType(Test) {
+    systemProperties(System.getProperties())
+    useJUnitPlatform()
+}
