@@ -6,6 +6,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
 
+import java.lang.module.Configuration;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class GitHubSoftAssertions  {
@@ -19,6 +21,7 @@ public class GitHubSoftAssertions  {
     @Test
     public void testGithub() {
         String title = driver.getTitle();
+
         assertEquals("GitHub: Where the world builds software · GitHub", title);
     }
 
